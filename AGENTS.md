@@ -58,3 +58,39 @@ Expected top-level structure:
 package.json
 AGENTS.md
 README.md
+
+### Key Directories
+
+- **app/** — App Router pages, layouts, and core application logic  
+- **app/api/** — Route handlers for auth, user mgmt, analytics, etc.  
+- **components/** — Reusable UI components  
+- **lib/** — Utility functions (db, auth, helpers)  
+- **styles/** — Global and shared styles  
+- **prisma/** — ORM schema + potential seed scripts  
+- **types/** — Global TypeScript types  
+- **public/** — Static assets (favicon, logos)  
+
+---
+
+## 🧪 Scripts
+
+Use the following commands during development:
+
+```bash
+# Install dependencies
+npm install
+
+# Run dev server
+npm run dev
+
+# Build app
+npm run build
+
+# Start production server
+npm start
+
+# Lint
+npm run lint
+
+# (Optional) Seed database
+npm run seed
