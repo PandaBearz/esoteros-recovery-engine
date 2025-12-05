@@ -1,24 +1,14 @@
-Esoteros Analytics
-
-A Next.js 14 Platform for AI-Driven Life Insights, Recovery Support, and Personal Transformation
-
-Esoteros Analytics is a modern SaaS platform built to help individuals—especially those rebuilding after rehab or major life transitions—gain clarity, structure, and momentum. By revealing hidden patterns across behavior, habits, finances, and daily rhythms, Esoteros empowers users to take control of their future through AI-driven insights and intuitive dashboards.
-
+Esoteros Analytics is a modern, AI-driven SaaS platform built to help individuals—especially those rebuilding after rehab or major life transitions—gain clarity, structure, and momentum. By revealing hidden patterns across behavior, habits, finances, and daily rhythms, it empowers users to take control of their future through intelligent insights and intuitive dashboards.
 
 ---
 
 The Vision
 
-Esoteros Analytics is designed to evolve into a full Life Operating System (Life-OS). It enables users to:
+Esoteros serves as a powerful discovery engine for support: it searches and aggregates resources from Federal, State, and Local government agencies as well as non-profits, surfacing options that most people never even know exist.
 
-• Track habits, mood, energy, and behavior
-• Discover correlations and hidden patterns across their data
-• Build routines and structure during recovery
-• Receive personalized AI insights and recommendations
-• Map out goals, timelines, and life plans
-
-The platform blends analytics, AI, and compassionate design to support meaningful personal transformation.
-
+ When someone enters detox or rehab—often at the lowest point in their life, feeling lost, overwhelmed, and unsure about the future—Esoteros helps translate long-term goals (6 months, 1 year, 2 years, 5 years, 10 years) and current realities (legal issues, finances, assets, debts, and other constraints) into a personalized action map. 
+ 
+ Using AI to automatically scour the web for every relevant resource that fits the user’s profile, such as income-restricted housing, job training, financial assistance, and grants, the platform assembles a step-by-step plan broken down into daily, weekly, monthly, and yearly tasks. The result is a clear, practical, and accessible roadmap that shows users how to move from where they are today to where they want to be tomorrow. Users then implement this plan, tracking their progress and adjusting as needed. Eeach task completed helps users build momentum and confidence, leading to a more positive outlook and a better future.
 
 ---
 

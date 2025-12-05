@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id             String          @id @default(uuid())
+  clerkId        String?         @unique // For authentication
+  email          String          @unique
+  name           String?
+  currentStreak  Int             @default(0)
+  lastActiveDate DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  tasks          Task[]
+  goals          Goal[]
+  savedResources SavedResource[]
+  vaultItems     VaultItem[]
+}
+
+model Task {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  isCompleted Boolean  @default(false)
+  type        String   // "admin", "health", "financial"
+  isUrgent    Boolean  @default(false)
+  deadline    DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Goal {
+  id          String   @id @default(uuid())
+  title       String
+  status      String   // "active", "completed"
+  targetDate  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model SavedResource {
+  id          String   @id @default(uuid())
+  title       String
+  category    String
+  link        String
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VaultItem {
+  id          String   @id @default(uuid())
+  title       String
+  fileUrl     String
+  fileType    String   // "pdf", "image", etc.
+  category    String   // "Identity", "Legal", "Medical", "Financial"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

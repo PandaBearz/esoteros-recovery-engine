@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  /* Soft White / Cool Grey Background */
+  --background: #F8FAFC; 
+  /* Slate Blue/Grey Foreground for high readability */
+  --foreground: #334155; 
+  
+  /* Calming Teal */
+  --primary: #0D9488;
+  --primary-foreground: #FFFFFF;
+  
+  /* Slate Blue */
+  --secondary: #64748B;
+  --secondary-foreground: #FFFFFF;
+  
+  /* Soft Accents */
+  --accent: #E2E8F0;
+  --accent-foreground: #1E293B;
+  
+  /* Card Backgrounds */
+  --card: #FFFFFF;
+  --card-foreground: #334155;
+  
+  /* Borders */
+  --border: #E2E8F0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode: Deep Slate */
+    --background: #0F172A;
+    --foreground: #F1F5F9;
+    
+    --primary: #2DD4BF; /* Lighter teal for dark mode */
+    --primary-foreground: #0F172A;
+    
+    --secondary: #94A3B8;
+    --secondary-foreground: #0F172A;
+    
+    --accent: #1E293B;
+    --accent-foreground: #F1F5F9;
+    
+    --card: #1E293B;
+    --card-foreground: #F1F5F9;
+    
+    --border: #334155;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility classes for wellness aesthetic */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark .glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
